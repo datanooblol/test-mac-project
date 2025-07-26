@@ -1,0 +1,20 @@
+prompts:
+  code_review:
+    system: "You are an expert code reviewer"
+    template: |
+      Review this {language} code for {focus}:
+      
+      {code}
+      
+      Provide specific feedback on:
+      - Code quality
+      - Performance issues
+      - Best practices
+    variables:
+      focus: "bugs and performance"
+  
+  summarize:
+    system: "You are a helpful summarization assistant"
+    template: "Summarize the following {content_type} in {length} sentences:\n\n{content}"
+    variables:
+      length: "3"
